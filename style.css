@@ -1,0 +1,135 @@
+#container {
+    width: 100%;
+    max-width:  1000px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+form {
+    width: 90%;
+    margin: 0;
+    padding: .2em 5%;
+    background: #D8E0F2;
+}
+
+.column {
+    padding:  0;
+    float:  left;
+}
+
+@media all and (min-width: 310px) {
+    .column {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media all and (min-width: 375px) {
+    .column {
+        width: 42%;
+        margin: 0 4%;
+    }
+}
+
+@media all and (min-width: 720px) {
+    .column {
+        width: 27%;
+        margin: 0 3%;
+    }
+}
+
+label {
+    width: 100%;
+    margin: 0;
+    padding: .2em 0;
+    float: left;
+}
+
+input[type=checkbox] {
+    margin-right: .6em;
+}
+
+section {
+    width: 90%;
+    margin: 0;
+    padding: .2em 5%;
+}
+
+figure {
+    margin: .6em 2%;
+    padding: 0;
+    float: left;
+}
+
+@media all and (min-width: 310px) {
+    figure {
+        width: 46%;
+    }
+}
+
+@media all and (min-width: 420px) {
+    figure {
+        width: 29%;
+    }
+}
+
+@media all and (min-width: 720px) {
+    figure {
+        width: 21%;
+    }
+}
+
+img {
+    width: 100%;
+    max-width: 189px;
+    margin:  0 auto;
+    padding: 0;
+    display:  block;
+}
+
+/*Fonts*/
+p, label, figcaption, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    color: #555;
+}
+
+p, label {
+    font-size: 1em;      
+}
+
+figcaption {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+@media all and (min-width: 310px) {
+    figcaption {
+        font-size: 0.625em;
+    }
+}
+
+@media all and (min-width: 520px) {
+    figcaption {
+        font-size: 0.75em;
+    }
+}
+
+@media all and (min-width: 800px) {
+    figcaption {
+        font-size: 0.875em;
+    }
+}
+
+#alert {
+    visibility: hidden;
+    color: #F13718;
+}
+
+/*Simple Clearfix*/
+.clear {
+    clear: both;
+}
