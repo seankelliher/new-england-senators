@@ -47,8 +47,8 @@ var senators = {
     getSenators: function() {
         "use strict";
 
-        //Invoke functions - gather Senators by State
-        var preSenators = (senatorsCt.getSenatorsCt()).concat(senatorsMe.getSenatorsMe()).concat(senatorsMa.getSenatorsMa()).concat(senatorsNh.getSenatorsNh()).concat(senatorsRi.getSenatorsRi()).concat(senatorsVt.getSenatorsVt());
+        //Invoke functions - gather Senators by State and combine arrays with spread operator
+        var preSenators = [...senatorsCt.getSenatorsCt(), ...senatorsMe.getSenatorsMe(), ...senatorsMa.getSenatorsMa(), ...senatorsNh.getSenatorsNh(), ...senatorsRi.getSenatorsRi(), ...senatorsVt.getSenatorsVt()];
 
         //If statement for Senators
         if (preSenators.length === 0) {
@@ -66,8 +66,8 @@ var parties = {
     getParties: function() {
         "use strict";
 
-        //Invoke functions - gather Senators by Party
-        var preParties = (senatorsDem.getSenatorsDem()).concat(senatorsInd.getSenatorsInd()).concat(senatorsRep.getSenatorsRep());
+        //Invoke functions - gather Senators by Party and combine arrays with spread operator
+        var preParties = [...senatorsDem.getSenatorsDem(), ...senatorsInd.getSenatorsInd(), ...senatorsRep.getSenatorsRep()];
 
         //If statement for Parties
         if (preParties.length === 0) {
@@ -85,8 +85,8 @@ var genders = {
     getGenders: function() {
         "use strict";
 
-        //Invoke functions - gather Senators by Gender
-        var preGenders = (senatorsFemale.getSenatorsFemale()).concat(senatorsMale.getSenatorsMale());
+        //Invoke functions - gather Senators by Gender and combine arrays with spread operator
+        var preGenders = [...senatorsFemale.getSenatorsFemale(), ...senatorsMale.getSenatorsMale()];
 
         //If statement for Genders
         if (preGenders.length === 0) {
