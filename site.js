@@ -105,12 +105,9 @@ var senatorsCt = {
         "use strict";
 
         let state = document.getElementById("connecticut");
-        if (state.checked === true) {
-            let senators = document.getElementsByClassName("ct");
-            return Array.from(senators, (sens) => sens.id);
-        }   else if (state.checked === false) {
-            return [];
-        }
+        let senators = document.getElementsByClassName("ct");
+        let result = (state.checked === true) ? Array.from(senators, (sens) => sens.id) : [];
+        return result;
     }
 };
 
@@ -121,12 +118,9 @@ var senatorsMe = {
         "use strict";
 
         let state = document.getElementById("maine");
-        if (state.checked === true) {
-            let senators = document.getElementsByClassName("me");
-            return Array.from(senators, (sens) => sens.id);
-        }   else if (state.checked === false) {
-            return [];
-        }
+        let senators = document.getElementsByClassName("me");
+        let result = (state.checked === true) ? Array.from(senators, (sens) => sens.id) : [];
+        return result;
     }
 };
 
@@ -137,12 +131,9 @@ var senatorsMa = {
         "use strict";
 
         let state = document.getElementById("massachusetts");
-        if (state.checked === true) {
-            let senators = document.getElementsByClassName("ma");
-            return Array.from(senators, (sens) => sens.id);
-        }   else if (state.checked === false) {
-            return [];
-        }
+        let senators = document.getElementsByClassName("ma");
+        let result = (state.checked === true) ? Array.from(senators, (sens) => sens.id) : [];
+        return result;
     }
 };
 
@@ -153,12 +144,9 @@ var senatorsNh = {
         "use strict";
 
         let state = document.getElementById("new-hampshire");
-        if (state.checked === true) {
-            let senators = document.getElementsByClassName("nh");
-            return Array.from(senators, (sens) => sens.id);
-        }   else if (state.checked === false) {
-            return [];
-        }
+        let senators = document.getElementsByClassName("nh");
+        let result = (state.checked === true) ? Array.from(senators, (sens) => sens.id) : [];
+        return result;
     }
 };
 
@@ -169,12 +157,9 @@ var senatorsRi = {
         "use strict";
 
         let state = document.getElementById("rhode-island");
-        if (state.checked === true) {
-            let senators = document.getElementsByClassName("ri");
-            return Array.from(senators, (sens) => sens.id);
-        }   else if (state.checked === false) {
-            return [];
-        }
+        let senators = document.getElementsByClassName("ri");
+        let result = (state.checked === true) ? Array.from(senators, (sens) => sens.id) : [];
+        return result;
     }
 };
 
@@ -185,12 +170,9 @@ var senatorsVt = {
         "use strict";
 
         let state = document.getElementById("vermont");
-        if (state.checked === true) {
-            let senators = document.getElementsByClassName("vt");
-            return Array.from(senators, (sens) => sens.id);
-        }   else if (state.checked === false) {
-            return [];
-        }
+        let senators = document.getElementsByClassName("vt");
+        let result = (state.checked === true) ? Array.from(senators, (sens) => sens.id) : [];
+        return result;
     }
 };
 
@@ -201,12 +183,9 @@ var senatorsDem = {
         "use strict";
 
         let party = document.getElementById("democratic-party");
-        if (party.checked === true) {
-            let members = document.getElementsByClassName("democrat");
-            return Array.from(members, (mems) => mems.id);
-        }   else if (party.checked === false) {
-            return [];
-        }
+        let members = document.getElementsByClassName("democrat");
+        let result = (party.checked === true) ? Array.from(members, (mems) => mems.id) : [];
+        return result;
     }
 };
 
@@ -217,12 +196,9 @@ var senatorsInd = {
         "use strict";
 
         let party = document.getElementById("independent-party");
-        if (party.checked === true) {
-            let members = document.getElementsByClassName("independent");
-            return Array.from(members, (mems) => mems.id);
-        }   else if (party.checked === false) {
-            return [];
-        }
+        let members = document.getElementsByClassName("independent");
+        let result = (party.checked === true) ? Array.from(members, (mems) => mems.id) : [];
+        return result;
     }
 };
 
@@ -233,12 +209,9 @@ var senatorsRep = {
         "use strict";
 
         let party = document.getElementById("republican-party");
-        if (party.checked === true) {
-            let members = document.getElementsByClassName("republican");
-            return Array.from(members, (mems) => mems.id);
-        }   else if (party.checked === false) {
-            return [];
-        }
+        let members = document.getElementsByClassName("republican");
+        let result = (party.checked === true) ? Array.from(members, (mems) => mems.id) : [];
+        return result;
     }
 };
 
@@ -249,12 +222,9 @@ var senatorsFemale = {
         "use strict";
 
         let gender = document.getElementById("gender-female");
-        if (gender.checked === true) {
-            let group = document.getElementsByClassName("female");
-            return Array.from(group, (grp) => grp.id);
-        }   else if (gender.checked === false) {
-            return [];
-        }
+        let group = document.getElementsByClassName("female");
+        let result = (gender.checked === true) ? Array.from(group, (grp) => grp.id) : [];
+        return result;
     }
 };
 
@@ -265,11 +235,8 @@ var senatorsMale = {
         "use strict";
 
         let gender = document.getElementById("gender-male");
-        if (gender.checked === true) {
-            let group = document.getElementsByClassName("male");
-            return Array.from(group, (grp) => grp.id);
-        }   else if (gender.checked === false) {
-            return [];
-        }
+        let group = document.getElementsByClassName("male");
+        let result = (gender.checked === true) ? Array.from(group, (grp) => grp.id) : [];
+        return result;
     }
 };
