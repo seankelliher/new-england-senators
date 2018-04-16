@@ -50,13 +50,10 @@ var senators = {
         //Invoke functions - gather Senators by State and combine arrays with spread operator
         var preSenators = [...senatorsCt.getSenatorsCt(), ...senatorsMe.getSenatorsMe(), ...senatorsMa.getSenatorsMa(), ...senatorsNh.getSenatorsNh(), ...senatorsRi.getSenatorsRi(), ...senatorsVt.getSenatorsVt()];
 
-        //If statement for Senators
-        if (preSenators.length === 0) {
-            let all = document.getElementsByClassName("all");
-            return Array.from(all, (a) => a.id);
-        }   else if (preSenators.length !== 0) {
-            return preSenators;
-        }
+        //Ternary statement for Senators
+        let all = document.getElementsByClassName("all");
+        let result = (preSenators.length === 0) ? Array.from(all, (a) => a.id) : preSenators;
+        return result;
     }
 };
 
@@ -69,13 +66,10 @@ var parties = {
         //Invoke functions - gather Senators by Party and combine arrays with spread operator
         var preParties = [...senatorsDem.getSenatorsDem(), ...senatorsInd.getSenatorsInd(), ...senatorsRep.getSenatorsRep()];
 
-        //If statement for Parties
-        if (preParties.length === 0) {
-            let all = document.getElementsByClassName("all");
-            return Array.from(all, (a) => a.id);
-        }   else if (preParties.length !== 0) {
-            return preParties;
-        }
+        //Ternary statement for Parties
+        let all = document.getElementsByClassName("all");
+        let result = (preParties.length === 0) ? Array.from(all, (a) => a.id) : preParties;
+        return result;
     }
 };
 
@@ -88,13 +82,10 @@ var genders = {
         //Invoke functions - gather Senators by Gender and combine arrays with spread operator
         var preGenders = [...senatorsFemale.getSenatorsFemale(), ...senatorsMale.getSenatorsMale()];
 
-        //If statement for Genders
-        if (preGenders.length === 0) {
-            let all = document.getElementsByClassName("all");
-            return Array.from(all, (a) => a.id);
-        }   else if (preGenders.length !== 0) {
-            return preGenders;
-        }
+        //Ternary statement for Genders
+        let all = document.getElementsByClassName("all");
+        let result = (preGenders.length === 0) ? Array.from(all, (a) => a.id) : preGenders;
+        return result;
     }
 };
 
