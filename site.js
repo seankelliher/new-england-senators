@@ -15,12 +15,13 @@ senatorsFilter = {
     hideFigures: function () {
         "use strict";
 
-        let index;
         const figure = document.getElementsByTagName("figure");
+        const figureArray = Array.from(figure);
 
-        for (index = 0; index < figure.length; index += 1) {
-            figure[index].style.display = "none";
-        }
+        //For Each loop
+        figureArray.forEach(function (fig) {
+            fig.style.display = "none";
+        });
 
         //Invoke the "get results" function
         senatorsFilter.getResults();
@@ -37,15 +38,14 @@ senatorsFilter = {
 
         //Display results - if no matches, display alert. If matches, display matches.
         const alert = document.getElementById("alert");
-        let index;
 
         if (intersection2.length === 0) {
             alert.style.visibility = "visible";
         } else if (intersection2.length !== 0) {
-            for (index = 0; index < intersection2.length; index += 1) {
-                document.getElementById(intersection2[index]).style.display = "block";
+            intersection2.forEach(function (int) {
+                document.getElementById(int).style.display = "block";
                 alert.style.visibility = "hidden";
-            }
+            });
         }
     },
 
