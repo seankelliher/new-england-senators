@@ -12,6 +12,13 @@ form {
     background: #D8E0F2;
 }
 
+/*Clearfix for form (accomplished with pseudo-element technique)*/
+form::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
 .column {
     padding:  0;
     float:  left;
@@ -53,6 +60,13 @@ section {
     width: 90%;
     margin: 0;
     padding: .2em 5%;
+}
+
+/*Clearfix for section (accomplished with pseudo-element technique)*/
+section::after {
+    clear: both;
+    content: "";
+    display: table;
 }
 
 figure {
@@ -127,9 +141,4 @@ h2 {
 #alert {
     visibility: hidden;
     color: #F13718;
-}
-
-/*Simple Clearfix*/
-.clear {
-    clear: both;
 }
