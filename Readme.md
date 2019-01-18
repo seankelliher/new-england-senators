@@ -30,3 +30,5 @@ This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.t
 
 * Readme file based on [template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) by Billie Thompson.
 * Senate data from [The United States Senate](https://www.senate.gov).
+* Design guidance from Google's [Material Design](https://material.io/design).
+* Fonts from [Google Fonts](https://fonts.google.com).
