@@ -1,17 +1,18 @@
-//Watch the form, when a change occurs invoke the "hide figures" function, which then invokes the other functions
-let senatorsFilter;
+//Monitor form, when a change occurs invoke the "hide figures" function.
+let senFl;
 
 document.querySelector("form").addEventListener("change", function () {
     "use strict";
 
     //Invoke the "hide figures" function
-    senatorsFilter.hideFigures();
+    senFl.hideFigures();
 
 });
 
-senatorsFilter = {
+senFl = {
 
-    //The "hide figures" function. This function hides all figures on the page. (The other functions reveal them.)
+    //The "hide figures" function. This function hides all figures on the page.
+    //The other functions reveal them.
     hideFigures: function () {
         "use strict";
 
@@ -23,207 +24,267 @@ senatorsFilter = {
             fig.style.display = "none";
         });
 
-        //Invoke the "get results" function
-        senatorsFilter.getResults();
+        //Invoke the "get results" function.
+        senFl.getResults();
     },
 
     getResults: function () {
         "use strict";
 
-        //Invoke the "senators" and "parties" functions and get the intersection of the two results
-        const intersection1 = senatorsFilter.getSenators().filter((x) => (senatorsFilter.getParties()).includes(x));
+        //Invoke the "senators" and "parties" functions.
+        //Get the intersection of the two results
+        const int1 = senFl.getSen().filter((x) => (senFl.getPty()).includes(x));
 
-        //Invoke the "genders" function and get the intersection of the above result and this result
-        const intersection2 = intersection1.filter((x) => senatorsFilter.getGenders().includes(x));
+        //Invoke the "genders" function.
+        //Get the intersection of the above result and this result.
+        const int2 = int1.filter((x) => senFl.getGenders().includes(x));
 
-        //Display results - if no matches, display alert. If matches, display matches.
+        //Display results - if no matches, display alert.
         const alert = document.getElementById("alert");
 
-        if (intersection2.length === 0) {
+        if (int2.length === 0) {
             alert.style.visibility = "visible";
-        } else if (intersection2.length !== 0) {
-            intersection2.forEach(function (int) {
+        } else if (int2.length !== 0) {
+            int2.forEach(function (int) {
                 document.getElementById(int).style.display = "block";
                 alert.style.visibility = "hidden";
             });
         }
     },
 
-    //The "senators function". This function invokes the six "senators by state" functions and reveals which states' senators are selected (if no states are selected, it returns all senators)
-    getSenators: function () {
+    //The "senators function" invokes the six "senators by state" functions.
+    ///It reveals which states' senators are selected.
+    //If no states are selected, it returns all senators.
+    getSen: function () {
         "use strict";
 
-        //Invoke functions - gather Senators by State and combine arrays with spread operator
-        const preSenators = [...senatorsFilter.getSenatorsCt(), ...senatorsFilter.getSenatorsMe(), ...senatorsFilter.getSenatorsMa(), ...senatorsFilter.getSenatorsNh(), ...senatorsFilter.getSenatorsRi(), ...senatorsFilter.getSenatorsVt()];
+        //Gather Senators by State and combine arrays with spread operator.
+        const preSenators = [
+            ...senFl.getSenCt(),
+            ...senFl.getSenMe(),
+            ...senFl.getSenMa(),
+            ...senFl.getSenNh(),
+            ...senFl.getSenRi(),
+            ...senFl.getSenVt()
+        ];
 
         //Ternary statement for Senators
         const all = document.getElementsByClassName("all");
-        const result = (preSenators.length === 0)
+        const result = (
+            (preSenators.length === 0)
             ? Array.from(all, (a) => a.id)
-            : preSenators;
+            : preSenators
+        );
         return result;
     },
 
-    //The "parties function". This function invokes the three "senators by party" functions and reveals which parties' senators are selected (if no parties are selected, it returns all senators)
-    getParties: function () {
+    //The "parties function" invokes the three "senators by party" functions.
+    //It reveals which parties' senators are selected.
+    //If no parties are selected, it returns all senators.
+    getPty: function () {
         "use strict";
 
-        //Invoke functions - gather Senators by Party and combine arrays with spread operator
-        const preParties = [...senatorsFilter.getSenatorsDem(), ...senatorsFilter.getSenatorsInd(), ...senatorsFilter.getSenatorsRep()];
+        //Gather Senators by Party and combine arrays with spread operator.
+        const preParties = [
+            ...senFl.getSenDem(),
+            ...senFl.getSenInd(),
+            ...senFl.getSenRep()
+        ];
 
         //Ternary statement for Parties
         const all = document.getElementsByClassName("all");
-        const result = (preParties.length === 0)
+        const result = (
+            (preParties.length === 0)
             ? Array.from(all, (a) => a.id)
-            : preParties;
+            : preParties
+        );
         return result;
     },
 
-    //The "genders function". This function invokes the two "senators by gender" functions and reveals which genders' senators are selected (if no genders are selected, it returns all senators)
+    //The "genders function" invokes the two "senators by gender" functions.
+    //It and reveals which genders' senators are selected.
+    //If no genders are selected, it returns all senators.
     getGenders: function () {
         "use strict";
 
-        //Invoke functions - gather Senators by Gender and combine arrays with spread operator
-        const preGenders = [...senatorsFilter.getSenatorsFemale(), ...senatorsFilter.getSenatorsMale()];
+        //Gather Senators by Gender and combine arrays with spread operator
+        const preGenders = [
+            ...senFl.getSenFemale(),
+            ...senFl.getSenMale()
+        ];
 
         //Ternary statement for Genders
         const all = document.getElementsByClassName("all");
-        const result = (preGenders.length === 0)
+        const result = (
+            (preGenders.length === 0)
             ? Array.from(all, (a) => a.id)
-            : preGenders;
+            : preGenders
+        );
         return result;
     },
 
-    //The "senators function" for Connecticut. It gathers the senators from Connecticut, if Connecticut is selected. Otherwise, it returns an empty array.
-    getSenatorsCt: function () {
+    //The "senators function" for Connecticut gathers the senators from CT.
+    //If Connecticut is not selected, it returns an empty array.
+    getSenCt: function () {
         "use strict";
 
         const state = document.getElementById("connecticut");
         const senators = document.getElementsByClassName("ct");
-        const result = (state.checked === true)
+        const result = (
+            (state.checked === true)
             ? Array.from(senators, (sens) => sens.id)
-            : [];
+            : []
+        );
         return result;
     },
 
-    //The "senators function" for Maine. It gathers the senators from Maine, if Maine is selected. Otherwise, it returns an empty array.
-    getSenatorsMe: function () {
+    //The "senators function" for Maine gathers the senators from ME.
+    //If Maine is not selected, it returns an empty array.
+    getSenMe: function () {
         "use strict";
 
         const state = document.getElementById("maine");
         const senators = document.getElementsByClassName("me");
-        const result = (state.checked === true)
+        const result = (
+            (state.checked === true)
             ? Array.from(senators, (sens) => sens.id)
-            : [];
+            : []
+        );
         return result;
     },
 
-    //The "senators function" for Massachusetts. It gathers the senators from Massachusetts, if Massachusetts is selected. Otherwise, it returns an empty array.
-    getSenatorsMa: function () {
+    //The "senators function" for Massachusetts gathers the senators from MA.
+    //If Massachusetts is not selected, it returns an empty array.
+    getSenMa: function () {
         "use strict";
 
         const state = document.getElementById("massachusetts");
         const senators = document.getElementsByClassName("ma");
-        const result = (state.checked === true)
+        const result = (
+            (state.checked === true)
             ? Array.from(senators, (sens) => sens.id)
-            : [];
+            : []
+        );
         return result;
     },
-
-    //The "senators function" for New Hampshire. It gathers the senators from New Hampshire, if New Hampshire is selected. Otherwise, it returns an empty array.
-    getSenatorsNh: function () {
+    //The "senators function" for New Hampshire gathers the senators from NH.
+    //If New Hampshire is not selected, it returns an empty array.
+    getSenNh: function () {
         "use strict";
 
         const state = document.getElementById("new-hampshire");
         const senators = document.getElementsByClassName("nh");
-        const result = (state.checked === true)
+        const result = (
+            (state.checked === true)
             ? Array.from(senators, (sens) => sens.id)
-            : [];
+            : []
+        );
         return result;
     },
 
-    //The "senators function" for Rhode Island. It gathers the senators from Rhode Island, if Rhode Island is selected. Otherwise, it returns an empty array.
-    getSenatorsRi: function () {
+    //The "senators function" for Rhode Island gathers the senators from RI.
+    //If Rhode Island is not selected, it returns an empty array.
+    getSenRi: function () {
         "use strict";
 
         const state = document.getElementById("rhode-island");
         const senators = document.getElementsByClassName("ri");
-        const result = (state.checked === true)
+        const result = (
+            (state.checked === true)
             ? Array.from(senators, (sens) => sens.id)
-            : [];
+            : []
+        );
         return result;
     },
 
-    //The "senators function" for Vermont. It gathers the senators from Vermont, if Vermont is selected. Otherwise, it returns an empty array.
-    getSenatorsVt: function () {
+    //The "senators function" for Vermont gathers the senators from VT.
+    //If Vermont is not selected, it returns an empty array.
+    getSenVt: function () {
         "use strict";
 
         const state = document.getElementById("vermont");
         const senators = document.getElementsByClassName("vt");
-        const result = (state.checked === true)
+        const result = (
+            (state.checked === true)
             ? Array.from(senators, (sens) => sens.id)
-            : [];
+            : []
+        );
         return result;
     },
 
-    //The "parties function" for the Democratic Party. It gathers the senators from the Democratic Party, if the Democratic Party is selected. Otherwise, it returns an empty array.
-    getSenatorsDem: function () {
+    //The "parties function" for Democratic Party gathers Democrats.
+    //If Democratic Party is not selected, it returns an empty array.
+    getSenDem: function () {
         "use strict";
 
         const party = document.getElementById("democratic-party");
         const members = document.getElementsByClassName("democrat");
-        const result = (party.checked === true)
+        const result = (
+            (party.checked === true)
             ? Array.from(members, (mems) => mems.id)
-            : [];
+            : []
+        );
         return result;
     },
 
-    //The "parties function" for the Independent Party. It gathers the senators from the Independent Party, if the Independent Party is selected. Otherwise, it returns an empty array.
-    getSenatorsInd: function () {
+    //The "parties function" for Independent Party gathers Independents.
+    //If Independent Partyis not selected, it returns an empty array.
+    getSenInd: function () {
         "use strict";
 
         const party = document.getElementById("independent-party");
         const members = document.getElementsByClassName("independent");
-        const result = (party.checked === true)
+        const result = (
+            (party.checked === true)
             ? Array.from(members, (mems) => mems.id)
-            : [];
+            : []
+        );
         return result;
     },
 
-    //The "parties function" for the Republican Party. It gathers the senators from the Republican Party, if the Republican Party is selected. Otherwise, it returns an empty array.
-    getSenatorsRep: function () {
+    //The "parties function" for Republican Party gathers Republicians.
+    //If Republican Party is not selected, it returns an empty array.
+    getSenRep: function () {
         "use strict";
 
         const party = document.getElementById("republican-party");
         const members = document.getElementsByClassName("republican");
-        const result = (party.checked === true)
+        const result = (
+            (party.checked === true)
             ? Array.from(members, (mems) => mems.id)
-            : [];
+            : []
+        );
         return result;
     },
 
-    //The "genders function" for Female. It gathers the Female senators, if Female senators is selected. Otherwise, it returns an empty array.
-    getSenatorsFemale: function () {
+    //The "genders function" for Female gathers Female Senators.
+    //If Female is not selected, it returns an empty array.
+    getSenFemale: function () {
         "use strict";
 
         const gender = document.getElementById("gender-female");
         const group = document.getElementsByClassName("female");
-        const result = (gender.checked === true)
+        const result = (
+            (gender.checked === true)
             ? Array.from(group, (grp) => grp.id)
-            : [];
+            : []
+        );
         return result;
     },
 
-    //The "genders function" for Male. It gathers the Male senators, if Male senators is selected. Otherwise, it returns an empty array.
-    getSenatorsMale: function () {
+    //The "genders function" for Male gathers Male Senators.
+    //If Male is not selected, it returns an empty array.
+    getSenMale: function () {
         "use strict";
 
         const gender = document.getElementById("gender-male");
         const group = document.getElementsByClassName("male");
-        const result = (gender.checked === true)
+        const result = (
+            (gender.checked === true)
             ? Array.from(group, (grp) => grp.id)
-            : [];
+            : []
+        );
         return result;
     }
 
-}; //close senatorsFilter
+}; //close senFl
