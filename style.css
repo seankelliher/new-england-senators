@@ -9,13 +9,7 @@ form {
     width: 90%;
     margin: 0;
     padding: .2em 5%;
-}
-
-/*Clearfix for form (accomplished with pseudo-element technique)*/
-form::after {
-    clear: both;
-    content: "";
-    display: table;
+    display: flow-root;
 }
 
 .column {
@@ -59,13 +53,7 @@ section {
     width: 90%;
     margin: 0;
     padding: .2em 5%;
-}
-
-/*Clearfix for section (accomplished with pseudo-element technique)*/
-section::after {
-    clear: both;
-    content: "";
-    display: table;
+    display: flow-root;
 }
 
 figure {
