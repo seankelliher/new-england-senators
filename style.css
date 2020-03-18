@@ -131,10 +131,14 @@ input[type=checkbox] {
 }
 
 section {
-    width: 90%;
-    margin: 0;
-    padding: .2em 5%;
-    display: flow-root;
+    width: 95%;
+    margin: 0 2.5%;
+    padding: 0;
+    flex: initial; /*flex: 0 1 auto*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; /*main axis*/
+    align-items: flex-start; /*cross axis*/
 }
 
 figure {
