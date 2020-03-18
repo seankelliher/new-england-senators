@@ -123,7 +123,7 @@ label {
     width: 100%;
     margin: 0;
     padding: .2em 0;
-    float: left;
+    flex: initial; /*flex: 0 1 auto*/
 }
 
 input[type=checkbox] {
