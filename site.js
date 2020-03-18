@@ -1,12 +1,12 @@
-//Monitor form, when a change occurs invoke the "hide figures" function.
-let senFl;
+//Global variable.
+let senators;
 
+//Monitor the form. When "change" occurs, invoke these functions.
 document.querySelector("form").addEventListener("change", function () {
     "use strict";
 
-    //Invoke the "hide figures" function
-    senFl.hideFigures();
-
+    senators.hideFigures();
+    senators.reviewBoxes();
 });
 
 senFl = {
