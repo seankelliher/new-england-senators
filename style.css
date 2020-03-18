@@ -269,8 +269,3 @@ h2 {
         font-size: 1.25em; /*20 pixels*/
     }
 }
-
-#alert {
-    visibility: hidden;
-    color: #f44336;
-}
