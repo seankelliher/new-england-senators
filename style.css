@@ -158,24 +158,36 @@ section {
 }
 
 figure {
-    margin: .6em 2%;
+    margin: 0 0 1em 0;
     padding: 0;
-    float: left;
+    flex: initial; /*flex: 0 1 auto*/
 }
 
-@media all and (min-width: 320px) {
+@media all and (min-width: 300px) {
     figure {
-        width: 46%;
+        width: 48%;
     }
 }
 
-@media all and (min-width: 470px) {
+@media all and (min-width: 600px) {
     figure {
-        width: 29%;
+        width: 32%;
     }
 }
 
-@media all and (min-width: 720px) {
+@media all and (min-width: 700px) {
+    figure {
+        width: 28%;
+    }
+}
+
+@media all and (min-width: 900px) {
+    figure {
+        width: 21%;
+    }
+}
+
+@media all and (min-width: 1200px) {
     figure {
         width: 21%;
     }
