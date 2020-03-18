@@ -193,14 +193,6 @@ figure {
     }
 }
 
-img {
-    width: 100%;
-    max-width: 189px;
-    margin:  0 auto;
-    padding: 0;
-    display:  block;
-}
-
 /*Fonts*/
 p {
     font-family: 'Francois One', sans-serif;
