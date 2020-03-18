@@ -24,34 +24,4 @@ senators = {
         });
     },
 
-    //The "genders function" for Female gathers Female Senators.
-    //If Female is not selected, it returns an empty array.
-    getSenFemale: function () {
-        "use strict";
-
-        const gender = document.getElementById("gender-female");
-        const group = document.getElementsByClassName("female");
-        const result = (
-            (gender.checked === true)
-            ? Array.from(group, (grp) => grp.id)
-            : []
-        );
-        return result;
-    },
-
-    //The "genders function" for Male gathers Male Senators.
-    //If Male is not selected, it returns an empty array.
-    getSenMale: function () {
-        "use strict";
-
-        const gender = document.getElementById("gender-male");
-        const group = document.getElementsByClassName("male");
-        const result = (
-            (gender.checked === true)
-            ? Array.from(group, (grp) => grp.id)
-            : []
-        );
-        return result;
-    }
-
 }; //close senFl
