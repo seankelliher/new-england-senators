@@ -27,29 +27,37 @@
             
             <form>
 
-                <h1>New England States and Senators</h1>
+                <div class="column" id="col-state">
 
-                <div class="column">   
-                    <h2>By State</h2>
-                    <label for="connecticut"><input type="checkbox" id="connecticut">Connecticut</label>
-                    <label for="maine"><input type="checkbox" id="maine">Maine</label>
-                    <label for="massachusetts"><input type="checkbox" id="massachusetts">Massachusetts</label>
-                    <label for="new-hampshire"><input type="checkbox" id="new-hampshire">New Hampshire</label>
-                    <label for="rhode-island"><input type="checkbox" id="rhode-island">Rhode Island</label>
-                    <label for="vermont"><input type="checkbox" id="vermont">Vermont</label></input>
+                    <div class="col-head">
+                        <h2>By State</h2>
+                    </div>
+
+                    <div class="col-sub">
+                        <label for="connecticut"><input type="checkbox" class="state" id="ct">Connecticut</label>
+                        <label for="maine"><input type="checkbox" class="state" id="me">Maine</label>
+                        <label for="massachusetts"><input type="checkbox" class="state" id="ma">Massachusetts</label>
+                    </div> <!--close col-sub-->
+
+                    <div class="col-sub">
+                        <label for="new-hampshire"><input type="checkbox" class="state" id="nh">New Hampshire</label>
+                        <label for="rhode-island"><input type="checkbox" class="state" id="ri">Rhode Island</label>
+                        <label for="vermont"><input type="checkbox" class="state" id="vt">Vermont</label></input>
+                    </div> <!--close col-sub-->
+                    
                 </div> <!--close column-->
 
-                <div class="column">
+                <div class="column" id="col-party">
                     <h2>Party</h2>
-                    <label for="democrat"><input type="checkbox" id="democratic-party">Democrat</label>
-                    <label for="republican"><input type="checkbox" id="republican-party">Republican</label>
-                    <label for="independent"><input type="checkbox" id="independent-party">Independent</label>
+                    <label for="democrat"><input type="checkbox" class="party" id="dem">Democrat</label>
+                    <label for="republican"><input type="checkbox" class="party" id="rep">Republican</label>
+                    <label for="independent"><input type="checkbox" class="party" id="ind">Independent</label>
                 </div> <!--close column-->
 
-                <div class="column">
+                <div class="column" id="col-gender">
                     <h2>Gender</h2>
-                    <label for="female"><input type="checkbox" id="gender-female">Female</label>
-                    <label for="male"><input type="checkbox" id="gender-male">Male</label>
+                    <label for="female"><input type="checkbox" class="gender" id="female">Female</label>
+                    <label for="male"><input type="checkbox" class="gender" id="male">Male</label>
                 </div> <!--close column-->
 
             </form>
