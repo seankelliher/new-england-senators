@@ -141,6 +141,22 @@ section {
     align-items: flex-start; /*cross axis*/
 }
 
+#alert {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial; /*flex: 0 1 auto*/
+    color: #B61827; /*red 400 dark*/
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
 figure {
     margin: .6em 2%;
     padding: 0;
