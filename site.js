@@ -9,23 +9,19 @@ document.querySelector("form").addEventListener("change", function () {
     senators.reviewBoxes();
 });
 
-senFl = {
+senators = {
 
-    //The "hide figures" function. This function hides all figures on the page.
-    //The other functions reveal them.
+    //Hide all figures on the page.
+    //Following functions will reveal them.
     hideFigures: function () {
         "use strict";
 
         const figure = document.getElementsByTagName("figure");
         const figureArray = Array.from(figure);
 
-        //For Each loop
         figureArray.forEach(function (fig) {
             fig.style.display = "none";
         });
-
-        //Invoke the "get results" function.
-        senFl.getResults();
     },
 
     getResults: function () {
