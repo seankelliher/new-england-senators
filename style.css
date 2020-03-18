@@ -22,15 +22,25 @@ header {
 }
 
 form {
-    width: 90%;
-    margin: 0;
-    padding: .2em 5%;
-    display: flow-root;
+    width: 95%;
+    margin: 0 2.5% 1em 2.5%;
+    padding: 0;
+    flex: initial; /*flex: 0 1 auto*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; /*main axis*/
+    align-items: stretch; /*cross axis*/
 }
 
 .column {
-    padding:  0;
-    float:  left;
+    margin: 0;
+    padding: 0 2.5% .5em 2.5%;
+    flex: initial; /*flex: 0 1 auto*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; /*main axis*/
+    align-items: flex-start; /*cross axis*/
+    background: #F5F5F5; /*grey 100*/
 }
 
 @media all and (min-width: 320px) {
