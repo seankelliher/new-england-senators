@@ -24,51 +24,6 @@ senators = {
         });
     },
 
-    //The "parties function" for Democratic Party gathers Democrats.
-    //If Democratic Party is not selected, it returns an empty array.
-    getSenDem: function () {
-        "use strict";
-
-        const party = document.getElementById("democratic-party");
-        const members = document.getElementsByClassName("democrat");
-        const result = (
-            (party.checked === true)
-            ? Array.from(members, (mems) => mems.id)
-            : []
-        );
-        return result;
-    },
-
-    //The "parties function" for Independent Party gathers Independents.
-    //If Independent Partyis not selected, it returns an empty array.
-    getSenInd: function () {
-        "use strict";
-
-        const party = document.getElementById("independent-party");
-        const members = document.getElementsByClassName("independent");
-        const result = (
-            (party.checked === true)
-            ? Array.from(members, (mems) => mems.id)
-            : []
-        );
-        return result;
-    },
-
-    //The "parties function" for Republican Party gathers Republicians.
-    //If Republican Party is not selected, it returns an empty array.
-    getSenRep: function () {
-        "use strict";
-
-        const party = document.getElementById("republican-party");
-        const members = document.getElementsByClassName("republican");
-        const result = (
-            (party.checked === true)
-            ? Array.from(members, (mems) => mems.id)
-            : []
-        );
-        return result;
-    },
-
     //The "genders function" for Female gathers Female Senators.
     //If Female is not selected, it returns an empty array.
     getSenFemale: function () {
