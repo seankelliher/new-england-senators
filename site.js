@@ -135,4 +135,40 @@ senators = {
         }
     },
 
-}; //close senFl
+    displayResults: function (i2) {
+        "use strict";
+
+        //Receive results. Loop through them. Display them.
+        i2.forEach(function (i) {
+            document.getElementById(i).style.display = "block";
+        });
+
+    },
+
+    hideMessage: function () {
+        "use strict";
+
+        const alert = document.getElementById("alert");
+        const containsShow = alert.classList.contains("show");
+
+        //If #alert contains class "show", remove it. Add class "hide".
+        if (containsShow === true) {
+            alert.classList.remove("show");
+            alert.classList.add("hide");
+        }
+    },
+
+    showMessage: function () {
+        "use strict";
+
+        const alert = document.getElementById("alert");
+        const containsHide = alert.classList.contains("hide");
+
+        //If #alert contains class "hide", remove it. Add class "show".
+        if (containsHide === true) {
+            alert.classList.remove("hide");
+            alert.classList.add("show");
+        }
+    }
+
+}; //close senators
