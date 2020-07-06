@@ -108,8 +108,16 @@ p, label, figcaption {
     font-weight: 400;
 }
 
+label {
+    display: block;
+}
+
 figcaption {
     text-align: center;
+}
+
+span {
+    display: block;
 }
 
 h1 {
