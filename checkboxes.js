@@ -1,3 +1,6 @@
+//Process checkboxes. Discover senators to display.
+//Complicated module. Added notes to help.
+
 import {
     ctSenators,
     meSenators,
@@ -14,13 +17,13 @@ import {
 
 function processCheckboxes() {
 
-    //Hide all the figures.
+    //Hide all figures on page.
     const figures = document.querySelectorAll("figure");
     figures.forEach(function (figure) {
         figure.style.display = "none";
     });
 
-    //Retrieve the form elements.
+    //Retrieve form elements.
     const stateForm = document.getElementById("state-form");
     const partyForm = document.getElementById("party-form");
     const genderForm = document.getElementById("gender-form");
@@ -35,60 +38,68 @@ function processCheckboxes() {
     const partyBoxesArray = Array.from(partyBoxes);
     const genderBoxesArray = Array.from(genderBoxes);
 
-    //Results of below function go here.
+    //"checked boxes" arrays (created below).
     const states = [];
     const parties = [];
     const genders = [];
 
-    //Loop state checkboxes. Add checked boxes to states array.
+    //Loop through "state" checkboxes. Add checked ids to states array.
     stateBoxesArray.forEach(function (box) {
         if (box.checked === true) {
             states.push(box.id);
         }
     });
 
-    //Loop party checkboxes. Add checked boxes to parties array.
+    //Loop through "party" checkboxes. Add checked ids to parties array.
     partyBoxesArray.forEach(function (box) {
         if (box.checked === true) {
             parties.push(box.id);
         }
     });
 
-    //Loop gender checkboxes. Add checked boxes to genders array.
+    //Loop through "gender" checkboxes. Add checked ids to genders array.
     genderBoxesArray.forEach(function (box) {
         if (box.checked === true) {
             genders.push(box.id);
         }
     });
 
-    //If no state checkboxes checked. All all ids to states array.
+    //If user, checks nothing in a category...
+
+    //If no "state" checkboxes checked. Add all ids to states array.
     if (states.length === 0) {
         stateBoxesArray.forEach(function (box) {
             states.push(box.id);
         });
     }
 
-    //If no party checkboxes checked. All all ids to parties array.
+    //If no "party" checkboxes checked. Add all ids to parties array.
     if (parties.length === 0) {
         partyBoxesArray.forEach(function (box) {
             parties.push(box.id);
         });
     }
 
-    //If no gender checkboxes checked. All all ids to genders array.
+    //If no "gender" checkboxes checked. Add all ids to genders array.
     if (genders.length === 0) {
         genderBoxesArray.forEach(function (box) {
             genders.push(box.id);
         });
     }
 
-    //Translate selected groups (ex, Vermont, Democrat, female) to Senators.
-    //Arrays for selected states, parties, genders.
+    //We now have states, parties, genders arrays with ids of chk'd checkboxes.
+    //Loop through these arrays. Get matching "group" array (imported above).
+    //Add "group" array to arrays below.
+
     const ckSenatorsStates = [];
     const ckSenatorsParties = [];
     const ckSenatorsGenders = [];
 
-    //Create arrays for selected states.
+    //For example: if we have: const state = [ma, vt].
+    //We add maSenators and vtSenators to ckSenatorsStates.
+    //ckSenatorsStates = [Ed Markey,Elizabeth Warren,Angus King,Bernie Sanders].
+
+    //Create array of senators from checked states.
     states.forEach(function (state) {
         if (state === "ct") {
             ckSenatorsStates.push(...ctSenators);
@@ -105,7 +116,7 @@ function processCheckboxes() {
         }
     });
 
-    //Create arrays for selected parties.
+    //Create array of senators from checked parties.
     parties.forEach(function (party) {
         if (party === "dem") {
             ckSenatorsParties.push(...demSenators);
@@ -116,7 +127,7 @@ function processCheckboxes() {
         }
     });
 
-    //Create arrays for selected genders.
+    //Create array of senators from checked genders.
     genders.forEach(function (gender) {
         if (gender === "female") {
             ckSenatorsGenders.push(...femaleSenators);
@@ -132,7 +143,7 @@ function processCheckboxes() {
     //Retrieve "alert" message.
     const alert = document.getElementById("alert");
 
-    //Make checked senators visible.
+    //Make checked senators visible. No results returned, show alert.
     if (int2.length !== 0) {
         int2.forEach(function (int) {
             const checked = document.getElementById(int);
@@ -142,7 +153,6 @@ function processCheckboxes() {
     } else {
         alert.style.display = "block";
     }
-
 }
 
 export {processCheckboxes};
