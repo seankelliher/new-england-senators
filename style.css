@@ -13,6 +13,7 @@ img {
     flex-flow: row wrap;
     justify-content: flex-start; /*main axis*/
     align-items: flex-start; /*cross axis*/
+    background: palegoldenrod;
 }
 
 header {
@@ -24,12 +25,13 @@ header {
 
 aside {
     margin: 0;
-    padding: 0 2.5%;
+    /*padding: 0 2.5%;*/
     flex: initial; /*flex: 0 1 auto*/
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start; /*main axis*/
     align-items: flex-start; /*cross axis*/
+    background: lightblue;
 }
 
 form {
@@ -37,93 +39,144 @@ form {
     padding: 0;
     flex: initial; /*flex: 0 1 auto*/
     border-top:  1px solid #EEE;
+    background: lightcoral;
 }
 
 section {
     margin: 0;
-    padding: 0 2.5%;
+    /*padding: 0 2.5%;*/
     flex: initial; /*flex: 0 1 auto*/
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; /*main axis*/
     align-items: flex-start; /*cross axis*/
+    background: lightcyan;
 }
 
 figure {
     margin: .5em 0;
     padding: 0;
     flex: initial; /*flex: 0 1 auto*/
+    background: lightgoldenrodyellow;
 }
 
 @media all and (min-width: 300px) {
     aside {
-        width: 97.5%;
-    } /*5% used for horizontal margin and padding*/
+        width: 95%;
+        padding: 0 2.5%;
+    }
 
     form {
-        width: ;
+        width: 50%;
     } /*0 used for horizontal margin and padding*/
 
     section {
-        width: 97.5%;
-    } /*5% used for horizontal margin and padding*/
+        width: 95%;
+        padding: 0 2.5%;
+    }
 
     figure {
         width: 40%;
+    } /*0 used for horizontal margin and padding*/
+}
+
+@media all and (min-width: 500px) {
+    aside {
+        width: 95%;
+        padding: 0 2.5%;
+    }
+
+    form {
+        width: 33.3%;
+    } /*0 used for horizontal margin and padding*/
+
+    section {
+        width: 95%;
+        padding: 0 2.5%;
+    }
+
+    figure {
+        width: 30%;
     } /*0 used for horizontal margin and padding*/
 }
 
 @media all and (min-width: 600px) {
     aside {
-        width: 97.5%;
-    } /*5% used for horizontal margin and padding*/
+        width: 25%;
+        padding: 0  0 0 2.5%;
+    }
 
     form {
-        width: ;
+        width: 100%;
     } /*0 used for horizontal margin and padding*/
 
     section {
-        width: 97.5%;
-    } /*5% used for horizontal margin and padding*/
+        width: 72.5%;
+         padding: 0;
+    }
 
     figure {
-        width: 40%;
+        width: 33.3%;
+    } /*0 used for horizontal margin and padding*/
+}
+
+@media all and (min-width: 700px) {
+    aside {
+        width: 22.5%;
+        padding: 0  0 0 2.5%;
+    }
+
+    form {
+        width: 100%;
+    } /*0 used for horizontal margin and padding*/
+
+    section {
+        width: 75%;
+         padding: 0;
+    }
+
+    figure {
+        width: 30%;
+    } /*0 used for horizontal margin and padding*/
+}
+
+@media all and (min-width: 800px) {
+    aside {
+        width: 20%;
+        padding: 0  0 0 2.5%;
+    }
+
+    form {
+        width: 100%;
+    } /*0 used for horizontal margin and padding*/
+
+    section {
+        width: 77.5%;
+         padding: 0;
+    }
+
+    figure {
+        width: 23%;
     } /*0 used for horizontal margin and padding*/
 }
 
 @media all and (min-width: 900px) {
     aside {
-        width: 97.5%;
-    } /*5% used for horizontal margin and padding*/
+        width: 17.5%;
+        padding: 0  0 0 2.5%;
+    }
 
     form {
-        width: ;
+        width: 100%;
     } /*0 used for horizontal margin and padding*/
 
     section {
-        width: 97.5%;
-    } /*5% used for horizontal margin and padding*/
+        width: 80%;
+         padding: 0;
+    }
 
     figure {
-        width: 40%;
-    } /*0 used for horizontal margin and padding*/
-}
-
-@media all and (min-width: 1200px) {
-    aside {
-        width: 97.5%;
-    } /*5% used for horizontal margin and padding*/
-
-    form {
-        width: ;
-    } /*0 used for horizontal margin and padding*/
-
-    section {
-        width: 97.5%;
-    } /*5% used for horizontal margin and padding*/
-
-    figure {
-        width: 40%;
+        width: 22%;
     } /*0 used for horizontal margin and padding*/
 }
 
