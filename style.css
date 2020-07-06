@@ -133,7 +133,11 @@ h2 {
 }
 
 @media all and (min-width: 300px) {
-    p, label, figcaption {
+    p {
+        font-size: .75em; /*12 pixels*/
+    }
+
+    figcaption, label {
         font-size: .75em; /*12 pixels*/
     }
 
@@ -153,7 +157,7 @@ h2 {
 }
 
 @media all and (min-width: 600px) {
-    p, label, figcaption {
+    p {
         font-size: 1em; /*16 pixels*/
     }
 
@@ -170,18 +174,10 @@ h2 {
     h1 {
         font-size: 1.5625em; /*25 pixels*/
     }
-
-    h2 {
-        font-size: 1.1875em; /*19 pixels*/
-    }
 }
 
 @media all and (min-width: 1200px) {
     h1 {
         font-size: 1.625em; /*26 pixels*/
-    }
-
-    h2 {
-        font-size: 1.25em; /*20 pixels*/
     }
 }
