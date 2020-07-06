@@ -1,3 +1,6 @@
+//Process "senator" objects to create "group" arrays.
+//For example, combine king and sanders to create "independents" array.
+
 import {
     blumenthal,
     murphy,
@@ -13,6 +16,7 @@ import {
     sanders
 } from "./senators.js";
 
+//Put "senators" objects in allSenators array.
 const allSenators = [
     blumenthal,
     murphy,
@@ -28,7 +32,7 @@ const allSenators = [
     sanders
 ];
 
-//State variables.
+//"state" arrays (created below).
 const ctSenators = [];
 const meSenators = [];
 const maSenators = [];
@@ -36,19 +40,19 @@ const nhSenators = [];
 const riSenators = [];
 const vtSenators = [];
 
-//Party variables.
+//"party" arrays (created below).
 const demSenators = [];
 const indSenators = [];
 const repSenators = [];
 
-//Gender variables.
+//"gender" arrays (created below).
 const femaleSenators = [];
 const maleSenators = [];
 
-//Function to loop through allSenators array.
+//Loop through allSenators array and "senator" objects within it.
 allSenators.forEach(function (index) {
 
-    //Create state's arrays.
+    //Create "state" arrays.
     if (index.state === "Connecticut") {
         ctSenators.push(index.id);
     } else if (index.state === "Maine") {
@@ -63,7 +67,7 @@ allSenators.forEach(function (index) {
         vtSenators.push(index.id);
     }
 
-    //Create party arrays.
+    //Create "party" arrays.
     if (index.party === "Democrat") {
         demSenators.push(index.id);
     } else if (index.party === "Independent") {
@@ -72,7 +76,7 @@ allSenators.forEach(function (index) {
         repSenators.push(index.id);
     }
 
-    //Create gender arrays.
+    //Create "gender" arrays.
     if (index.gender === "female") {
         femaleSenators.push(index.id);
     } else if (index.gender === "male") {
