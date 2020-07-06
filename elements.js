@@ -1,3 +1,5 @@
+//Process "senator" objects to create html elements.
+
 import {
     blumenthal,
     murphy,
@@ -35,7 +37,7 @@ function createElements() {
         //Retrieve section element.
         const section = document.querySelector("section");
 
-        //Create figure, figcaption, img elements.
+        //Create figure, figcaption, span, img elements.
         const figure = document.createElement("figure");
         const figcaption = document.createElement("figcaption");
         const span1 = document.createElement("span");
@@ -45,7 +47,6 @@ function createElements() {
 
         //Assign ids and content.
         figure.id = index.id;
-        //figcaption.textContent = index.imageCaption();
         img.src = index.imageUrl();
         img.alt = index.imageAlt();
         span1.textContent = index.name;
