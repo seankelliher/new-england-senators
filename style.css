@@ -17,8 +17,8 @@ img {
 
 header {
     width: 95%;
-    margin: 0 2.5% 1em 2.5%;
-    padding: 0;
+    margin: 0;
+    padding: 0 2.5%;
     flex: initial; /*flex: 0 1 auto*/
 }
 
