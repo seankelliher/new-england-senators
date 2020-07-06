@@ -194,17 +194,23 @@ input[type=checkbox] {
 }
 
 /*Fonts*/
-p, label, figcaption {
+p {
     font-family: 'Roboto', serif;
     line-height: 1.8;
     font-weight: 400;
 }
 
 label {
+    font-family: 'Roboto', serif;
+    line-height: 1.8;
+    font-weight: 400;
     display: block;
 }
 
 figcaption {
+    font-family: 'Roboto', serif;
+    line-height: 1.5;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -226,10 +232,14 @@ h2 {
 
 @media all and (min-width: 300px) {
     p {
-        font-size: .75em; /*12 pixels*/
+        font-size: .875em; /*14 pixels*/
     }
 
-    figcaption, label {
+    label {
+        font-size: .875em; /*14 pixels*/
+    }
+
+    figcaption {
         font-size: .75em; /*12 pixels*/
     }
 
@@ -239,12 +249,6 @@ h2 {
 
     h2 {
         font-size: 1.0625em; /*17 pixels*/
-    }
-}
-
-@media all and (min-width: 400px) {
-    p, label, figcaption {
-        font-size: .9375em; /*15 pixels*/
     }
 }
 
