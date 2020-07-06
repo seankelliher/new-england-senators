@@ -22,6 +22,17 @@ header {
     flex: initial; /*flex: 0 1 auto*/
 }
 
+aside {
+    width: 17.5%;
+    margin: 0;
+    padding: 0 0 0 2.5%;
+    flex: initial; /*flex: 0 1 auto*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; /*main axis*/
+    align-items: flex-start; /*cross axis*/
+}
+
 form {
     width: 95%;
     margin: 0 2.5% 2em 2.5%;
