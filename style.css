@@ -23,9 +23,8 @@ header {
 }
 
 aside {
-    width: 17.5%;
     margin: 0;
-    padding: 0 0 0 2.5%;
+    padding: 0 2.5%;
     flex: initial; /*flex: 0 1 auto*/
     display: flex;
     flex-flow: row wrap;
@@ -33,10 +32,16 @@ aside {
     align-items: flex-start; /*cross axis*/
 }
 
-section {
-    width: 80%;
-    margin: 0;
+form {
+    margin: 0 0 1em 0;
     padding: 0;
+    flex: initial; /*flex: 0 1 auto*/
+    border-top:  1px solid #EEE;
+}
+
+section {
+    margin: 0;
+    padding: 0 2.5%;
     flex: initial; /*flex: 0 1 auto*/
     display: flex;
     flex-flow: row wrap;
@@ -45,47 +50,81 @@ section {
 }
 
 figure {
-    margin: .5em 2.5%;
+    margin: .5em 0;
     padding: 0;
     flex: initial; /*flex: 0 1 auto*/
 }
 
 @media all and (min-width: 300px) {
+    aside {
+        width: 97.5%;
+    } /*5% used for horizontal margin and padding*/
+
+    form {
+        width: ;
+    } /*0 used for horizontal margin and padding*/
+
+    section {
+        width: 97.5%;
+    } /*5% used for horizontal margin and padding*/
+
     figure {
         width: 40%;
-    }
+    } /*0 used for horizontal margin and padding*/
 }
 
 @media all and (min-width: 600px) {
-    figure {
-        width: 32%;
-    }
-}
+    aside {
+        width: 97.5%;
+    } /*5% used for horizontal margin and padding*/
 
-@media all and (min-width: 700px) {
+    form {
+        width: ;
+    } /*0 used for horizontal margin and padding*/
+
+    section {
+        width: 97.5%;
+    } /*5% used for horizontal margin and padding*/
+
     figure {
-        width: 28%;
-    }
+        width: 40%;
+    } /*0 used for horizontal margin and padding*/
 }
 
 @media all and (min-width: 900px) {
+    aside {
+        width: 97.5%;
+    } /*5% used for horizontal margin and padding*/
+
+    form {
+        width: ;
+    } /*0 used for horizontal margin and padding*/
+
+    section {
+        width: 97.5%;
+    } /*5% used for horizontal margin and padding*/
+
     figure {
-        width: 21%;
-    }
+        width: 40%;
+    } /*0 used for horizontal margin and padding*/
 }
 
 @media all and (min-width: 1200px) {
-    figure {
-        width: 18%;
-    }
-}
+    aside {
+        width: 97.5%;
+    } /*5% used for horizontal margin and padding*/
 
-form {
-    width: 100%;
-    margin: 0 0 1em 0;
-    padding: 0;
-    flex: initial; /*flex: 0 1 auto*/
-    border-top:  1px solid #EEE;
+    form {
+        width: ;
+    } /*0 used for horizontal margin and padding*/
+
+    section {
+        width: 97.5%;
+    } /*5% used for horizontal margin and padding*/
+
+    figure {
+        width: 40%;
+    } /*0 used for horizontal margin and padding*/
 }
 
 input[type=checkbox] {
