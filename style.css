@@ -46,8 +46,8 @@ input[type=checkbox] {
 }
 
 section {
-    width: 95%;
-    margin: 0 2.5%;
+    width: 80%;
+    margin: 0;
     padding: 0;
     flex: initial; /*flex: 0 1 auto*/
     display: flex;
@@ -62,6 +62,7 @@ section {
     padding: 0;
     flex: initial; /*flex: 0 1 auto*/
     color: #B61827; /*red 400 dark*/
+    display: none;
 }
 
 .show {
