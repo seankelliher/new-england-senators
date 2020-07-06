@@ -33,18 +33,6 @@ aside {
     align-items: flex-start; /*cross axis*/
 }
 
-form {
-    width: 100%;
-    margin: 0 0 1em 0;
-    padding: 0;
-    flex: initial; /*flex: 0 1 auto*/
-    border-top:  1px solid #EEE;
-}
-
-input[type=checkbox] {
-    margin-right: .6em;
-}
-
 section {
     width: 80%;
     margin: 0;
@@ -56,15 +44,6 @@ section {
     align-items: flex-start; /*cross axis*/
 }
 
-#alert {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    flex: initial; /*flex: 0 1 auto*/
-    color: #B61827; /*red 400 dark*/
-    display: none;
-}
-
 figure {
     margin: .5em 2.5%;
     padding: 0;
@@ -73,7 +52,7 @@ figure {
 
 @media all and (min-width: 300px) {
     figure {
-        width: 48%;
+        width: 40%;
     }
 }
 
@@ -99,6 +78,27 @@ figure {
     figure {
         width: 18%;
     }
+}
+
+form {
+    width: 100%;
+    margin: 0 0 1em 0;
+    padding: 0;
+    flex: initial; /*flex: 0 1 auto*/
+    border-top:  1px solid #EEE;
+}
+
+input[type=checkbox] {
+    margin-right: .6em;
+}
+
+#alert {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial; /*flex: 0 1 auto*/
+    color: #B61827; /*red 400 dark*/
+    display: none;
 }
 
 /*Fonts*/
