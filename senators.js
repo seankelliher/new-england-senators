@@ -1,3 +1,6 @@
+//Create one object for each senator.
+
+//Constructor function.
 function Senator(id, name, state, party, gender) {
     this.id = id;
     this.name = name;
@@ -14,6 +17,7 @@ Senator.prototype.imageAlt = function () {
     return `portrait of Senator ${this.name}`;
 };
 
+//Invoke constructor function.
 const blumenthal = new Senator(
     "richard-blumenthal",
     "Richard Blumenthal",
