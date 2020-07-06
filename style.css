@@ -265,6 +265,10 @@ h2 {
     h1 {
         font-size: 1.5625em; /*25 pixels*/
     }
+
+    figcaption {
+        font-size: .875em; /*14 pixels*/
+    }
 }
 
 @media all and (min-width: 1200px) {
