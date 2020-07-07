@@ -24,7 +24,7 @@ header {
 
 aside {
     margin: 0;
-    /*padding: 0 2.5%;*/
+    /*padding in media queries (below)*/
     flex: initial; /*flex: 0 1 auto*/
     display: flex;
     flex-flow: row wrap;
@@ -41,7 +41,7 @@ form {
 
 section {
     margin: 0;
-    /*padding: 0 2.5%;*/
+    /*padding in media queries (below)*/
     flex: initial; /*flex: 0 1 auto*/
     display: flex;
     flex-flow: row wrap;
@@ -76,18 +76,8 @@ figure {
 }
 
 @media all and (min-width: 500px) {
-    aside {
-        width: 95%;
-        padding: 0 2.5%;
-    }
-
     form {
         width: 33.3%;
-    }
-
-    section {
-        width: 95%;
-        padding: 0 2.5%;
     }
 
     figure {
@@ -98,7 +88,7 @@ figure {
 @media all and (min-width: 600px) {
     aside {
         width: 25%;
-        padding: 0  0 0 2.5%;
+        padding: 0 0 0 2.5%;
     }
 
     form {
@@ -109,45 +99,25 @@ figure {
         width: 72.5%;
          padding: 0;
     }
-
-    figure {
-        width: 30%;
-    }
 }
 
 @media all and (min-width: 700px) {
     aside {
         width: 22.5%;
-        padding: 0  0 0 2.5%;
-    }
-
-    form {
-        width: 100%;
     }
 
     section {
         width: 75%;
-         padding: 0;
-    }
-
-    figure {
-        width: 30%;
     }
 }
 
 @media all and (min-width: 800px) {
     aside {
         width: 20%;
-        padding: 0  0 0 2.5%;
-    }
-
-    form {
-        width: 100%;
     }
 
     section {
         width: 77.5%;
-         padding: 0;
     }
 
     figure {
@@ -158,16 +128,10 @@ figure {
 @media all and (min-width: 900px) {
     aside {
         width: 17.5%;
-        padding: 0  0 0 2.5%;
-    }
-
-    form {
-        width: 100%;
     }
 
     section {
         width: 80%;
-         padding: 0;
     }
 
     figure {
