@@ -1,6 +1,6 @@
-# Senators By State, Party, and Gender
+# New England Senators
 
-UNDERGOING RENOVATION NOW. Interactive photo display of New England's US Senators that can be sorted by any combination of state, party, and gender. A "no matches" message appears if the selected combination returns no results.
+Interactive photo display of New England's US Senators that can be sorted by any combination of state, party, and gender. A "no matches" message appears if the selected combination returns no results.
 
 ## Authors
 
@@ -8,7 +8,7 @@ UNDERGOING RENOVATION NOW. Interactive photo display of New England's US Senator
 
 ## Deployment
 
-All you need is a web browser. Code works in a local or remote environment.
+All you need is a web browser. Code works in a local or remote environment. However, in a local environment, you may need to modify your brower's setting for local files.
 
 ## Built With
 
