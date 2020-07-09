@@ -76,6 +76,12 @@ figure {
     }
 }
 
+@media all and (min-width: 400px) {
+    figure {
+        width: 31%;
+    }
+}
+
 @media all and (min-width: 500px) {
     form {
         width: 33.3%;
