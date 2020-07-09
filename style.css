@@ -53,6 +53,7 @@ figure {
     margin: .5em 0;
     padding: 0;
     flex: initial; /*flex: 0 1 auto*/
+    background: lavenderblush;
 }
 
 @media all and (min-width: 300px) {
