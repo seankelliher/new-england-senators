@@ -120,6 +120,11 @@ figure {
     section {
         width: 75%;
     }
+
+    figure {
+        width: 22%;
+        margin: .5em 1%;
+    }
 }
 
 @media all and (min-width: 800px) {
