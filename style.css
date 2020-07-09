@@ -50,7 +50,6 @@ section {
 }
 
 figure {
-    margin: .5em 0;
     padding: 0;
     flex: initial; /*flex: 0 1 auto*/
     background: lavenderblush;
@@ -73,6 +72,7 @@ figure {
 
     figure {
         width: 45%;
+        margin: .5em 0;
     }
 }
 
