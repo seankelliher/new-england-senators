@@ -151,6 +151,19 @@ figure {
     }
 }
 
+@media all and (min-width: 1000px) {
+    figure {
+        width: 18%;
+        margin: .5em 2%;
+    }
+}
+
+@media all and (min-width: 1100px) {
+    figure {
+        width: 18%;
+    }
+}
+
 input[type=checkbox] {
     margin-right: .6em;
 }
