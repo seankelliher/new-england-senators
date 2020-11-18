@@ -31,13 +31,13 @@ Next, each time a checkbox is checked or unchecked, I loop through the checkboxe
 
 At this point, we have three category arrays: state, party, gender, with each containing ids for the Senators. For example:
 
-`const state = ['Joe', 'Mary', 'Lisa', 'George'];`
+`const state = ['joe', 'mary', 'lisa', 'george'];`
 
-`const party = ['Joe', 'Lisa', 'Phillip'];`
+`const party = ['joe', 'lisa', 'phillip'];`
 
-`const state = ['Lisa', 'George', 'Sylvia'];`
+`const state = ['lisa', 'george', 'sylvia'];`
 
-I filter the arrays to find the common id(s). I then display those Senators.
+I filter the arrays to find the common id or ids. I then display those Senators.
 
 ## Acknowledgments
 
