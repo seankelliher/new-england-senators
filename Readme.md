@@ -1,4 +1,4 @@
-[![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/https://img.shields.io/github/license/seankelliher/new-england-senators?style=flat-square)](/LICENSE.txt)
+[![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/new-england-senators?style=flat-square)](/LICENSE.txt)
 ## New England Senators
 
 Interactive component: sort New England's US Senators by state, political party, gender.
