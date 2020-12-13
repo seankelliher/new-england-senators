@@ -1,4 +1,7 @@
-//Create one object for each senator.
+//File creates an object for each Senator using constructor function.
+//Concise code with no repeated functions.
+//But "this" keyword triggers a JSLint warning...
+//unless "tolerate: this" is allowed.
 
 //Constructor function.
 function Senator(id, name, state, party, gender) {
