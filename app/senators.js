@@ -13,7 +13,7 @@ function Senator(id, name, state, party, gender) {
 }
 
 Senator.prototype.imageUrl = function () {
-    return `images/${this.id}-240.png`;
+    return `images/${this.id}-240x260.jpg`;
 };
 
 Senator.prototype.imageAlt = function () {
