@@ -11,8 +11,6 @@ Interactive component: sort New England's US Senators by state, political party,
 
 ![screen shot of project](/screenshots/new-england-senators-screenshot3.jpg)
 
-![screen shot of project](/screenshots/new-england-senators-screenshot4.jpg)
-
 ## Installation and Setup Instructions
 
 This is a static component. All you need is a web browser. However, component uses ES6 modules. Developing locally may require disabling your browser's local file restrictions.
