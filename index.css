@@ -18,7 +18,7 @@ img {
 header {
     width: 90%;
     margin: 0;
-    padding: 0 5%;
+    padding: 0 5% 1em 5%;
     flex: initial; /*flex: 0 1 auto*/
 }
 
@@ -55,6 +55,7 @@ aside {
 form {
     margin: 0 0 1em 0;
     padding: 0;
+    border-top: 1px solid #EEE; /*grey 200*/
     flex: initial; /*flex: 0 1 auto*/
 }
 
@@ -153,7 +154,7 @@ input[type=checkbox] {
 footer {
     width: 90%;
     margin: 0;
-    padding: 0 5%;
+    padding: 1em 5% 0 5%;
     flex: initial; /*flex: 0 1 auto*/
 }
 
@@ -189,6 +190,7 @@ figcaption {
     font-weight: 400;
     text-align: center;
     padding: .5em 0;
+    background: #F5F5F5; /*grey 100*/
     border-right: 1px solid #EEE; /*grey 200*/
     border-bottom: 1px solid #EEE; /*grey 200*/
     border-left: 1px solid #EEE; /*grey 200*/
