@@ -17,8 +17,8 @@ img {
 
 header {
     width: 90%;
-    margin: 0;
-    padding: 0 5% 1em 5%;
+    margin: 1.5em 0 0 0;
+    padding: 0 5%;
     flex: initial; /*flex: 0 1 auto*/
 }
 
@@ -55,7 +55,6 @@ aside {
 form {
     margin: 0 0 1em 0;
     padding: 0;
-    border-top: 1px solid #EEE; /*grey 200*/
     flex: initial; /*flex: 0 1 auto*/
 }
 
@@ -147,7 +146,7 @@ input[type=checkbox] {
     margin: 0;
     padding: 0;
     flex: initial; /*flex: 0 1 auto*/
-    color: #B61827; /*red 400 dark*/
+    color: #C41C00; /*deep orange 500 dark*/
     display: none;
 }
 
@@ -179,9 +178,9 @@ p {
 
 label {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.8;
+    line-height: 2;
     font-weight: 400;
-    display: block;
+    display: flex;
 }
 
 figcaption {
@@ -190,7 +189,7 @@ figcaption {
     font-weight: 400;
     text-align: center;
     padding: .5em 0;
-    background: #F5F5F5; /*grey 100*/
+    background: #B3E5FC; /*light blue 100*/
     border-right: 1px solid #EEE; /*grey 200*/
     border-bottom: 1px solid #EEE; /*grey 200*/
     border-left: 1px solid #EEE; /*grey 200*/
@@ -218,7 +217,7 @@ h2 {
     }
 
     label {
-        font-size: .875em; /*14 pixels*/
+        font-size: .9375em; /*15 pixels*/
     }
 
     figcaption {
@@ -239,6 +238,10 @@ h2 {
         font-size: 1em; /*16 pixels*/
     }
 
+     label {
+        font-size: 1em; /*16 pixels*/
+    }
+
     h1 {
         font-size: 1.5em; /*24 pixels*/
     }
@@ -249,12 +252,12 @@ h2 {
 }
 
 @media all and (min-width: 900px) {
-    h1 {
-        font-size: 1.5625em; /*25 pixels*/
-    }
-
     figcaption {
         font-size: .875em; /*14 pixels*/
+    }
+
+    h1 {
+        font-size: 1.5625em; /*25 pixels*/
     }
 }
 
