@@ -213,56 +213,71 @@ h2 {
 
 @media all and (min-width: 300px) {
     p {
-        font-size: .875em; /*14 pixels*/
+        font-size: .875em;
     }
 
     label {
-        font-size: .9375em; /*15 pixels*/
+        font-size: .9375em;
     }
 
     figcaption {
-        font-size: .75em; /*12 pixels*/
+        font-size: .75em;
     }
 
     h1 {
-        font-size: 1.4375em; /*23 pixels*/
+        font-size: 1.2em;
     }
 
     h2 {
-        font-size: 1.0625em; /*17 pixels*/
+        font-size: 1em;
+    }
+}
+
+@media all and (min-width: 400px) {
+    p {
+        font-size: .9375em;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2 {
+        font-size: 1.2em;
     }
 }
 
 @media all and (min-width: 600px) {
     p {
-        font-size: 1em; /*16 pixels*/
-    }
-
-     label {
-        font-size: 1em; /*16 pixels*/
+        font-size: 1em;
     }
 
     h1 {
-        font-size: 1.5em; /*24 pixels*/
+        font-size: 1.6em;
     }
 
     h2 {
-        font-size: 1.125em; /*18 pixels*/
+        font-size: 1.4em;
     }
 }
 
 @media all and (min-width: 900px) {
     figcaption {
-        font-size: .875em; /*14 pixels*/
+        font-size: .875em;
     }
 
     h1 {
-        font-size: 1.5625em; /*25 pixels*/
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.6em;
     }
 }
 
-@media all and (min-width: 1200px) {
-    h1 {
-        font-size: 1.625em; /*26 pixels*/
+/*Breaking at 900px splits NH into two lines*/
+@media all and (min-width: 950px) {
+    label {
+        font-size: 1em;
     }
 }
