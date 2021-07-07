@@ -181,6 +181,9 @@ label {
     line-height: 2;
     font-weight: 400;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; /*main axis*/
+    align-items: center; /*cross axis*/
 }
 
 figcaption {
